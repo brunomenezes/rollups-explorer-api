@@ -28,7 +28,8 @@
     "preload:apps:sepolia": "CHAIN_ID=11155111 sqd preload:apps",
     "tsc": "tsc",
     "process:prod": "node deploy/run --npmScriptName=sqd:process:prod",
-    "serve:prod": "node deploy/run --npmScriptName=sqd:graphql:prod"
+    "serve:prod": "node deploy/run --npmScriptName=sqd:graphql:prod",
+    "deploy:prod": "run-p process:prod serve:prod"
   },
   "dependencies": {
     "@cartesi/rollups": "1.4.0",
